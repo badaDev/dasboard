@@ -1,0 +1,35 @@
+<div class="table_div">
+    <h4>{{title}}</h4>
+    <table class="table">
+        <thead>
+        <tr>
+            <th *ngFor="let column of columns">
+            {{ column }}
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of data">
+            <td *ngFor="let column of columns">
+                <ng-container *ngIf="column !== 'Status'; else statusCell">
+                    <div class="user">
+                        <div>
+                            <img *ngIf="column === 'Name'" [src]="data[0]?.imageUrl" alt="Icon" class="icon">
+                        </div>
+                        <div>
+                            {{ item[column] }}
+                            <span *ngIf="column === 'Name'" class="email">{{item.email}}</span>
+                        </div>
+                    </div>
+                </ng-container>
+                <ng-template #statusCell>
+                <span [ngClass]="{'pending': item.Status === 'Pending', 'active': item.Status === 'Active'}">
+                    {{ item[column] }}
+                </span>
+                </ng-template>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+  

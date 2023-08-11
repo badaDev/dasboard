@@ -1,0 +1,18 @@
+<div class="top-nav">
+    <div class="left-section">
+        <h1>{{ pageTitle }}</h1>
+    </div>
+    <div class="right-section">
+        <div class="search-bar">
+            <i class="fa fa-search"></i>
+            <input type="text" placeholder="Enter keywords...">
+        </div>
+        <div class="language-dropdown">
+            <span>{{ selectedLanguage }}</span>
+            <i class="fa fa-angle-down"></i>
+        </div>
+        <img class="brightness-button" [src]="brightnessIconUrl" alt="Brightness Icon">
+        <i class="fa fa-bell notification"></i>
+        <img class="user-avatar" [src]="userAvatarUrl" alt="User Avatar">
+    </div>
+</div>

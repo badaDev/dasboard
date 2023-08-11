@@ -1,0 +1,14 @@
+<div class="dashboard-card">
+    <div class="card-header">
+        <img [src]="iconUrl" alt="Card Icon">
+    </div>
+    <div class="card-body">
+        <h2>{{ figure }}</h2>
+        <p class="data-name">{{ dataName }}</p>
+        <div>
+            <img [src]="graphIconUrl" alt="Card Icon">
+            <span class="percentage" [ngClass]="{ 'increase': increase, 'decrease': decrease }">{{ percentage }}%</span>
+            <span class="month">{{ month }}</span>
+        </div>
+    </div>
+</div>

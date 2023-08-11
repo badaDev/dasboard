@@ -1,0 +1,79 @@
+<div id="main">
+    <div class="my_sidenav">
+        <app-side-nav [logoUrl]="logo" [menus]="menus" [user]="user"></app-side-nav>
+    </div>
+    <div>
+        <app-top-nav 
+            [pageTitle]="title" 
+            [selectedLanguage]="lang" 
+            [brightnessIconUrl]="brightnessLevelIcon"
+            [userAvatarUrl]="userImg">
+        </app-top-nav>
+        <div class="main_body">
+            <div class="cards">
+                <div *ngFor="let cData of cardData">
+                    <app-card 
+                        [figure]="cData.figure"
+                        [dataName]="cData.dataName"
+                        [increase]="cData.increase"
+                        [graphIconUrl]="cData.graphIconUrl"
+                        [iconUrl]="cData.iconUrl"
+                        [month]="cData.month"
+                        [percentage]="cData.percentage">
+                    </app-card>
+                </div>
+            </div>
+            <div class="charts">
+                <div class="line_chart">
+                    <div class="line_chart-header">
+                        <div class="stats">User Inflow Statistics</div>
+                        <div class="agent-users">
+                            <div class="agents">
+                                <div style="display: flex;">
+                                    <div class="blue"></div>
+                                    <div>
+                                        <div class="agents_title">Agents</div>
+                                        <div class="agents_value">475 273</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="users">
+                                <div style="display: flex;">
+                                    <div class="green"></div>
+                                    <div>
+                                        <div class="users_title">Users</div>
+                                        <div class="users_value">782 396</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <app-line-chart
+                        [chartData]="[chartData1, chartData2]"
+                        [labels]="labels">
+                    </app-line-chart>
+                </div>
+                <div class="bar_chart">
+                    <div class="barchart_container">
+                        <app-bar-chart
+                        [chartData]="barChartData"
+                        labelProperty="month"
+                        valueProperty="value" 
+                        [colors]="barChartColor" 
+                        [width]="500"
+                        [height]="300"
+                        [userType]="userType"
+                        [userIncrease]="userIncrease"
+                        >
+                        </app-bar-chart>
+                    </div>
+                </div>
+            </div>
+            <div class="table">
+                <div>
+                    <app-table [title]="tableTitle" [columns]="tableColumns" [data]="tableData"></app-table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

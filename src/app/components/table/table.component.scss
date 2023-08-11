@@ -1,0 +1,72 @@
+.table_div {
+    background: #fff;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    h4 {
+        font-size: 1.5rem;
+        font-weight: 500;
+        font-family: 'Roboto';
+        margin-bottom: 0;
+        padding-top: 1rem;
+        padding-left: 0.7rem;
+    }
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    
+  }
+  
+  th, td {
+    padding: 0.7rem;
+    border-top: 1px solid #f0ecec;
+    text-align: left;
+  }
+
+  td {
+    font-family: 'Poppins';
+    font-size: 14px;
+  }
+
+  th {
+    border: none;
+    font-family: 'Roboto';
+    color: #bcb9b9;
+  }
+
+  .email {
+    display: block;
+  }
+
+  .user {
+    display: flex;
+    img {
+        width: 50px;
+        height: 50px;
+    }
+  }
+  
+  .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }
+  
+  .pending {
+    color: orange;
+    background-color: lightyellow;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .active {
+    color: green;
+    background-color: lightgreen;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+  }
+  

@@ -1,0 +1,32 @@
+<div class="side-nav">
+    <div class="logo">
+        <img [src]="logoUrl" alt="Logo">
+    </div>
+    <ul class="menu-list">
+        <li *ngFor="let menu of menus" [class.active]="menu.active">
+            <a>
+                <img [src]="menu.imgUrl" alt="Logo">
+                {{ menu.name }}
+                <ng-container *ngIf="menu.submenus">
+                    <span class="submenu-toggle" (click)="toggleSubmenu(menu)">
+                        <i class="fa fa-angle-down"></i>
+                    </span>
+                </ng-container>
+            </a>
+            <ul *ngIf="menu.expanded && menu.submenus && menu.submenus.length > 0" class="submenu-list">
+                <li *ngFor="let submenu of menu.submenus">
+                    <a href="#">
+                        {{ submenu.name }}
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <div class="user-profile">
+        <img [src]="user.imageUrl" alt="User Profile">
+        <div class="user-info">
+            <p>{{ user.name }}</p>
+            <p class="user_position">{{ user.position }}</p>
+        </div>
+    </div>
+</div>

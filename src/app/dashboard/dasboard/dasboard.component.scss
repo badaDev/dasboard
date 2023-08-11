@@ -1,0 +1,102 @@
+#main {
+    display: flex;
+    background: #f7f4f4;
+}
+
+#main > div:first-child {
+    flex: 0 0 15%;
+}
+
+#main > div:last-child {
+    flex: 1;
+}
+
+.main_body {
+    padding: 2rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-bottom: 2rem;
+}
+
+.charts {
+    display: flex;
+}
+
+.bar_chart {
+    padding-left: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.bar_chart .barchart_container {
+    padding: 0 1rem;
+    width: 100%;
+    background: #9F0D7F;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table {
+    width: 69%;
+}
+
+.line_chart {
+    background: #fff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.line_chart-header {
+    display: flex;
+    justify-content: space-between;
+
+    .stats {
+        font-family: 'Roboto';
+        font-size: 1rem;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+    }
+
+    .agent-users {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 1rem;
+    }
+
+    .blue {
+        width: 10px;
+        height: 10px;
+        background: blue;
+        border-radius: 50%;
+        margin-right: 3px;
+    }
+
+    .green {
+        width: 10px;
+        height: 10px;
+        background: green;
+        border-radius: 50%;
+        margin-right: 3px;
+    }
+
+    .agents, .users {
+        margin-right: 3rem;
+    }
+
+    .agents_title, .users_title {
+        font-size: 12px;
+        color: #ccc;
+        font-family: 'Roboto';
+    }
+
+    .agents_value, .users_value {
+        font-size: 14px;
+        font-family: 'Roboto';
+    }
+    
+}
